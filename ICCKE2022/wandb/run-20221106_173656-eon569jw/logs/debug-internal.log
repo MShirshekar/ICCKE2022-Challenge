@@ -1,0 +1,76 @@
+2022-11-06 17:36:56,712 INFO    StreamThr :3548 [internal.py:wandb_internal():88] W&B internal server running at pid: 3548, started at: 2022-11-06 17:36:56.712249
+2022-11-06 17:36:56,712 DEBUG   HandlerThread:3548 [handler.py:handle_request():139] handle_request: status
+2022-11-06 17:36:56,712 DEBUG   SenderThread:3548 [sender.py:send_request():317] send_request: status
+2022-11-06 17:36:56,727 INFO    WriterThread:3548 [datastore.py:open_for_write():75] open: G:\yolov7\wandb\run-20221106_173656-eon569jw\run-eon569jw.wandb
+2022-11-06 17:36:56,727 DEBUG   SenderThread:3548 [sender.py:send():303] send: header
+2022-11-06 17:36:56,727 DEBUG   SenderThread:3548 [sender.py:send():303] send: run
+2022-11-06 17:36:56,727 INFO    SenderThread:3548 [sender.py:_maybe_setup_resume():593] checking resume status for None/YOLOR/eon569jw
+2022-11-06 17:36:57,082 ERROR   SenderThread:3548 [internal_api.py:execute():213] 403 response executing GraphQL.
+2022-11-06 17:36:57,082 ERROR   SenderThread:3548 [internal_api.py:execute():214] 
+<html><head>
+<meta http-equiv="content-type" content="text/html;charset=utf-8">
+<title>403 Forbidden</title>
+</head>
+<body text=#000000 bgcolor=#ffffff>
+<h1>Error: Forbidden</h1>
+<h2>Your client does not have permission to get URL <code>/graphql</code> from this server.</h2>
+<h2></h2>
+</body></html>
+
+2022-11-06 17:36:57,734 INFO    WriterThread:3548 [datastore.py:close():279] close: G:\yolov7\wandb\run-20221106_173656-eon569jw\run-eon569jw.wandb
+2022-11-06 17:36:57,734 INFO    HandlerThread:3548 [handler.py:finish():814] shutting down handler
+2022-11-06 17:36:57,734 ERROR   StreamThr :3548 [internal.py:wandb_internal():163] Thread SenderThread:
+Traceback (most recent call last):
+  File "F:\Programes\Python\Python38\lib\site-packages\wandb\sdk\lib\retry.py", line 113, in __call__
+    result = self._call_fn(*args, **kwargs)
+  File "F:\Programes\Python\Python38\lib\site-packages\wandb\sdk\internal\internal_api.py", line 210, in execute
+    return self.client.execute(*args, **kwargs)  # type: ignore
+  File "F:\Programes\Python\Python38\lib\site-packages\wandb\vendor\gql-0.2.0\wandb_gql\client.py", line 52, in execute
+    result = self._get_result(document, *args, **kwargs)
+  File "F:\Programes\Python\Python38\lib\site-packages\wandb\vendor\gql-0.2.0\wandb_gql\client.py", line 60, in _get_result
+    return self.transport.execute(document, *args, **kwargs)
+  File "F:\Programes\Python\Python38\lib\site-packages\wandb\vendor\gql-0.2.0\wandb_gql\transport\requests.py", line 39, in execute
+    request.raise_for_status()
+  File "F:\Programes\Python\Python38\lib\site-packages\requests\models.py", line 1021, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 403 Client Error: Forbidden for url: https://api.wandb.ai/graphql
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "F:\Programes\Python\Python38\lib\site-packages\wandb\apis\normalize.py", line 26, in wrapper
+    return func(*args, **kwargs)
+  File "F:\Programes\Python\Python38\lib\site-packages\wandb\sdk\internal\internal_api.py", line 877, in run_resume_status
+    response = self.gql(
+  File "F:\Programes\Python\Python38\lib\site-packages\wandb\sdk\lib\retry.py", line 129, in __call__
+    retry_timedelta_triggered = check_retry_fn(e)
+  File "F:\Programes\Python\Python38\lib\site-packages\wandb\util.py", line 996, in no_retry_auth
+    raise CommError("Permission denied, ask the project owner to grant you access")
+wandb.errors.CommError: Permission denied, ask the project owner to grant you access
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "F:\Programes\Python\Python38\lib\site-packages\wandb\sdk\internal\internal_util.py", line 50, in run
+    self._run()
+  File "F:\Programes\Python\Python38\lib\site-packages\wandb\sdk\internal\internal_util.py", line 101, in _run
+    self._process(record)
+  File "F:\Programes\Python\Python38\lib\site-packages\wandb\sdk\internal\internal.py", line 308, in _process
+    self._sm.send(record)
+  File "F:\Programes\Python\Python38\lib\site-packages\wandb\sdk\internal\sender.py", line 305, in send
+    send_handler(record)
+  File "F:\Programes\Python\Python38\lib\site-packages\wandb\sdk\internal\sender.py", line 767, in send_run
+    error = self._maybe_setup_resume(run)
+  File "F:\Programes\Python\Python38\lib\site-packages\wandb\sdk\internal\sender.py", line 596, in _maybe_setup_resume
+    resume_status = self._api.run_resume_status(
+  File "F:\Programes\Python\Python38\lib\site-packages\wandb\apis\normalize.py", line 62, in wrapper
+    raise CommError(message, err).with_traceback(sys.exc_info()[2])
+  File "F:\Programes\Python\Python38\lib\site-packages\wandb\apis\normalize.py", line 26, in wrapper
+    return func(*args, **kwargs)
+  File "F:\Programes\Python\Python38\lib\site-packages\wandb\sdk\internal\internal_api.py", line 877, in run_resume_status
+    response = self.gql(
+  File "F:\Programes\Python\Python38\lib\site-packages\wandb\sdk\lib\retry.py", line 129, in __call__
+    retry_timedelta_triggered = check_retry_fn(e)
+  File "F:\Programes\Python\Python38\lib\site-packages\wandb\util.py", line 996, in no_retry_auth
+    raise CommError("Permission denied, ask the project owner to grant you access")
+wandb.errors.CommError: Permission denied, ask the project owner to grant you access

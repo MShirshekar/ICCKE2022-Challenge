@@ -1,0 +1,64 @@
+{
+    "os": "Windows-10-10.0.22000-SP0",
+    "python": "3.8.7",
+    "heartbeatAt": "2022-11-06T13:50:58.509860",
+    "startedAt": "2022-11-06T13:50:58.365018",
+    "docker": null,
+    "cuda": null,
+    "args": [
+        "--workers",
+        "8",
+        "--device",
+        "0",
+        "--batch-size",
+        "32",
+        "--data",
+        "dataset_roboflow/data.yaml",
+        "--img",
+        "640",
+        "640",
+        "--cfg",
+        "cfg/training/yolov7.yaml",
+        "--weights",
+        "yolo7.pt",
+        "--name",
+        "roboflow",
+        "--hyp",
+        "data/hyp.scratch.p5.yaml"
+    ],
+    "state": "running",
+    "program": "train.py",
+    "codePath": "train.py",
+    "host": "MShirshekar",
+    "username": "Mohammad Shirshekar",
+    "executable": "F:\\Programes\\Python\\Python38\\python.exe",
+    "cpu_count": 8,
+    "cpu_count_logical": 16,
+    "cpu_freq": {
+        "current": 3000.0,
+        "min": 0.0,
+        "max": 3000.0
+    },
+    "cpu_freq_per_core": [
+        {
+            "current": 3000.0,
+            "min": 0.0,
+            "max": 3000.0
+        }
+    ],
+    "disk": {
+        "total": 377.69726181030273,
+        "used": 298.6899948120117
+    },
+    "gpu": "NVIDIA GeForce RTX 2060 with Max-Q Design",
+    "gpu_count": 1,
+    "gpu_devices": [
+        {
+            "name": "NVIDIA GeForce RTX 2060 with Max-Q Design",
+            "memory_total": 6442450944
+        }
+    ],
+    "memory": {
+        "total": 31.41952896118164
+    }
+}

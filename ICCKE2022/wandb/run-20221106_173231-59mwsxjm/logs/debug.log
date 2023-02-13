@@ -1,0 +1,27 @@
+2022-11-06 17:32:31,571 INFO    MainThread:22044 [wandb_setup.py:_flush():68] Configure stats pid to 22044
+2022-11-06 17:32:31,571 INFO    MainThread:22044 [wandb_setup.py:_flush():68] Loading settings from C:\Users\ASUS\.config\wandb\settings
+2022-11-06 17:32:31,571 INFO    MainThread:22044 [wandb_setup.py:_flush():68] Loading settings from G:\yolov7\wandb\settings
+2022-11-06 17:32:31,571 INFO    MainThread:22044 [wandb_setup.py:_flush():68] Loading settings from environment variables: {'_require_service': 'True'}
+2022-11-06 17:32:31,571 INFO    MainThread:22044 [wandb_setup.py:_flush():68] Inferring run settings from compute environment: {'program_relpath': 'train.py', 'program': 'train.py'}
+2022-11-06 17:32:31,571 INFO    MainThread:22044 [wandb_setup.py:_flush():68] Applying login settings: {'api_key': '***REDACTED***'}
+2022-11-06 17:32:31,571 INFO    MainThread:22044 [wandb_init.py:_log_setup():476] Logging user logs to G:\yolov7\wandb\run-20221106_173231-59mwsxjm\logs\debug.log
+2022-11-06 17:32:31,571 INFO    MainThread:22044 [wandb_init.py:_log_setup():477] Logging internal logs to G:\yolov7\wandb\run-20221106_173231-59mwsxjm\logs\debug-internal.log
+2022-11-06 17:32:31,571 INFO    MainThread:22044 [wandb_init.py:init():516] calling init triggers
+2022-11-06 17:32:31,571 INFO    MainThread:22044 [wandb_init.py:init():519] wandb.init called with sweep_config: {}
+config: {'weights': 'yolo7_training.pt', 'cfg': 'cfg/training/yolov7.yaml', 'data': 'dataset_roboflow/data.yaml', 'hyp': {'lr0': 0.01, 'lrf': 0.1, 'momentum': 0.937, 'weight_decay': 0.0005, 'warmup_epochs': 3.0, 'warmup_momentum': 0.8, 'warmup_bias_lr': 0.1, 'box': 0.05, 'cls': 0.3, 'cls_pw': 1.0, 'obj': 0.7, 'obj_pw': 1.0, 'iou_t': 0.2, 'anchor_t': 4.0, 'fl_gamma': 0.0, 'hsv_h': 0.015, 'hsv_s': 0.7, 'hsv_v': 0.4, 'degrees': 0.0, 'translate': 0.2, 'scale': 0.9, 'shear': 0.0, 'perspective': 0.0, 'flipud': 0.0, 'fliplr': 0.5, 'mosaic': 1.0, 'mixup': 0.15, 'copy_paste': 0.0, 'paste_in': 0.15, 'loss_ota': 1}, 'epochs': 300, 'batch_size': 32, 'img_size': [640, 640], 'rect': False, 'resume': False, 'nosave': False, 'notest': False, 'noautoanchor': False, 'evolve': False, 'bucket': '', 'cache_images': False, 'image_weights': False, 'device': '0', 'multi_scale': False, 'single_cls': False, 'adam': False, 'sync_bn': False, 'local_rank': -1, 'workers': 8, 'project': 'runs/train', 'entity': None, 'name': 'roboflow', 'exist_ok': False, 'quad': False, 'linear_lr': False, 'label_smoothing': 0.0, 'upload_dataset': False, 'bbox_interval': -1, 'save_period': -1, 'artifact_alias': 'latest', 'freeze': [0], 'v5_metric': False, 'world_size': 1, 'global_rank': -1, 'save_dir': 'runs\\train\\roboflow6', 'total_batch_size': 32}
+2022-11-06 17:32:31,571 INFO    MainThread:22044 [wandb_init.py:init():569] starting backend
+2022-11-06 17:32:31,571 INFO    MainThread:22044 [wandb_init.py:init():573] setting up manager
+2022-11-06 17:32:31,571 INFO    MainThread:22044 [backend.py:_multiprocessing_setup():102] multiprocessing start_methods=spawn, using: spawn
+2022-11-06 17:32:31,587 INFO    MainThread:22044 [wandb_init.py:init():580] backend started and connected
+2022-11-06 17:32:31,587 INFO    MainThread:22044 [wandb_init.py:init():658] updated telemetry
+2022-11-06 17:32:31,587 INFO    MainThread:22044 [wandb_init.py:init():693] communicating run to backend with 60 second timeout
+2022-11-06 17:32:37,675 WARNING MsgRouterThr:22044 [router.py:message_loop():77] message_loop has been closed
+2022-11-06 17:32:41,645 ERROR   MainThread:22044 [wandb_init.py:init():1105] error
+Traceback (most recent call last):
+  File "F:\Programes\Python\Python38\lib\site-packages\wandb\sdk\wandb_init.py", line 1078, in init
+    run = wi.init()
+  File "F:\Programes\Python\Python38\lib\site-packages\wandb\sdk\wandb_init.py", line 697, in init
+    result = handle.wait(
+  File "F:\Programes\Python\Python38\lib\site-packages\wandb\sdk\lib\mailbox.py", line 259, in wait
+    raise MailboxError("transport failed")
+wandb.errors.MailboxError: transport failed
