@@ -158,6 +158,7 @@ The following image showcases 20 superior models generated through the evolution
     <img src="images/hyper-1.jpg" alt="{{ }}">
 </figure>
 The accompanying image showcases the optimal values of hyperparameters that result in improved accuracy:
+
 <figure class="image">
     <img src="images/hyper-2.jpg" alt="{{ }}">
 </figure>
