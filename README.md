@@ -1,8 +1,7 @@
 # ICCKE2022-Challenge
 This repository relates to ICCKE 2022 AI FUM Challenge's solution about poultry abnormality detection.
 
-<iframe src="https://drive.google.com/file/d/1X871L9LAiW0jbgRhJaRafDaplZQG43eu/preview"  frameborder="0" allowfullscreen="true"></iframe>
-
+<iframe src="https://drive.google.com/file/d/1X871L9LAiW0jbgRhJaRafDaplZQG43eu/preview" width="640" height="480" allow="autoplay"></iframe>
 # Overview
 The aim of the challenge is to detect abnormal behaviors (presence of disease) among chickens on a broiler farm.
 
