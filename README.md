@@ -186,6 +186,7 @@ For the analysis of the movements of objects in the environment, the movements o
 
 <h2 id="3">Code and Test on custom data</h3>
 In order to evaluate the implemented structure or test on your custom data, you must need to change directory by executing the following command in the terminal:
+
 > cd .\ICCKE2022\
 
 Prior to proceeding, ensure to specify the --conf flag for confidence level and the --source flag for the location of your custom data as you want.
